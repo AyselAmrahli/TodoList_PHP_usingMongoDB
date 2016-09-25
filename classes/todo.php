@@ -27,6 +27,7 @@ class Todo{
 
    }
 
+   //One Todo
    public function getTodo($id){
 
      $cursor = $this->collection->findOne(array('_id'=>new MongoId($id)));
@@ -34,6 +35,7 @@ class Todo{
 
    }
 
+   //Add Todo to Database
    public function addTodo($postData){
 
      $this->name        = $postData['name'];
@@ -58,6 +60,36 @@ class Todo{
 
 
    }
+    //-----delete todo------//
+    public function removeTodo($id){
+
+      $cursor = $this->collection->remove(array('_id'=>new MongoId($id)));
+      //Location
+      header('Location: index.php');
+    }
+
+    //-----update todo------//
+    public function updateTodo($id,$postUpdatedData){
+
+           $this->name        = $postUpdatedData['name'];
+           $this->category    = $postUpdatedData['category'];
+           $this->priority    = $postUpdatedData['priority'];
+           $this->task_date   = $postUpdatedData['task_date'];
+           $this->description = $postUpdatedData['description'];
+
+           $this->document = array(
+             "name"       => $this->name,
+             "category"   => $this->category,
+             "priority"   => $this->priority,
+             "task_date"  => $this->task_date,
+             "description"=> $this->description
+            );
+
+            //update todo
+          $this->collection->update(array('_id'=>new MongoId($id)),$this->document);  
+
+
+    }
 
 }
 
