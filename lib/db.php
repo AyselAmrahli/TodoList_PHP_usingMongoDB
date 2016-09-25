@@ -1,10 +1,10 @@
 <?php
 
 //connect MongoDB
-$mongo = new MongoClient();
+$mongo  = new MongoClient();
 
 //select database
-$db = $mongo->selectDB('todos');
+$db     = $mongo->selectDB('todos');
 
 
  ?>

@@ -4,6 +4,7 @@ class Todo{
 
   protected $db;
   protected $collection;
+  protected $document;
 
   private $name;
   private $category;
@@ -30,6 +31,31 @@ class Todo{
 
      $cursor = $this->collection->findOne(array('_id'=>new MongoId($id)));
      return $cursor;
+
+   }
+
+   public function addTodo($postData){
+
+     $this->name        = $postData['name'];
+     $this->category    = $postData['category'];
+     $this->priority    = $postData['priority'];
+     $this->task_date   = $postData['task_date'];
+     $this->description = $postData['description'];
+
+
+     $this->document = array(
+       "name"       => $this->name,
+       "category"   => $this->category,
+       "priority"   => $this->priority,
+       "task_date"  => $this->task_date,
+       "description"=> $this->description
+      );
+      // adding to database
+      $this->collection->insert($this->document);
+
+      //location
+      header('Location: index.php');
+
 
    }
 
