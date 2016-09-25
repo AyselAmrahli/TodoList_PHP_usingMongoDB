@@ -10,7 +10,7 @@
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>
-      <h1 class="header center orange-text">My Todos</h1>
+      <h1 class="header center text_color">My Todos</h1>
       <div class="row">
         <div class="col m6 push-m3">
           <div class="collection">

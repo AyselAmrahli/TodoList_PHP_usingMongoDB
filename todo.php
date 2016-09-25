@@ -17,7 +17,7 @@ if (isset($_POST['DeleteSubmit'])) {
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <ul class="collection with-header">
-        <li class="collection-header"><h4><?php echo $todo->getTodo($id)["name"]; ?></h4></li>
+        <li class="collection-header text_color"><h4><?php echo $todo->getTodo($id)["name"]; ?></h4></li>
         <li class="collection-item"><div>Category: <?php echo $todo->getTodo($id)["category"]; ?></div></li>
         <li class="collection-item"><div>Priority: <?php echo $todo->getTodo($id)["priority"]; ?></div></li>
         <!-- <li class="collection-item"><div>Date:&nbsp &nbsp<?php //echo date('Y-m-d H:m:s',$todo->getTodo($id)["task_date"]->sec); ?></div></li> -->
@@ -39,8 +39,6 @@ if (isset($_POST['DeleteSubmit'])) {
       <i class="material-icons right">edit</i>
     </a>
 </div>
-
-
 
     </div>
   </div>

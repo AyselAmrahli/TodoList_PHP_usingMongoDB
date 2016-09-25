@@ -6,9 +6,23 @@
  * Made By MaterializeCSS.com
  */
 
+/*changed by me. A little :D*/
+/* */
 .icon-block {
   padding: 0 15px;
 }
 .icon-block .material-icons {
 	font-size: inherit;
+}
+.navbar_color{
+  background-color: #e64a19;
+}
+footer.page-footer{
+  background-color: #212121;
+}
+.text_color {
+  color: #212121;
+}
+.orange_text{
+  color: #e64a19;
 }

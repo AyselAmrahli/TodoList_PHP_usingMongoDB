@@ -16,8 +16,8 @@
   <link href="public/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-  <nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">My Todo List</a>
+  <nav class="navbar_color lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="index.php" class="brand-logo">My Todo List</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="index.php">Home</a></li>
         <li><a href="add.php">Add Todo</a></li>
